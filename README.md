@@ -12,7 +12,7 @@ A prototype prosthetic hand built using **LEGO Mindstorms EV3**, demonstrating a
 - **CAD / Fabrication:** **SolidWorks**, **3D printing (Prusa MK4, PLA)**  
 
 ## Project Goals
-- Build a working prosthetic-hand-style gripper that can be developed toward a medical assistive concept using EV3-compatible components
+- Build a working prosthetic-hand-style gripper that can be developed toward a medical assistive concept, using EV3-compatible components
 - Implement reliable open/close control with basic safety limits (encoder-based positioning)
 - Explore sensor-driven behaviors (grip trigger, proximity-based actions, release conditions)
 - Document the design so it can be reproduced or improved
