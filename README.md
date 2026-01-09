@@ -1,54 +1,75 @@
 # EV3 Prosthetic Hand (LEGO Mindstorms)
 
-A prototype prosthetic hand built using **LEGO Mindstorms EV3**, focused on demonstrating a functional, motor-driven grip mechanism and a simple control system that can be tested and iterated quickly.
+A prototype prosthetic hand built using **LEGO Mindstorms EV3**, demonstrating a functional motor-driven grip mechanism and a control system designed for fast iteration and repeatable testing.
+
+## Tech Stack
+- **Platform:** LEGO Mindstorms EV3  
+- **Programming:** **RobotC** (C-based)  
+- **Controller:** EV3 Brick  
+- **Actuation:** **3 EV3 motors** (Large + Medium) driving finger and thumb motion  
+- **Sensors:** **Touch**, **Ultrasonic**, **Accelerometer**  
+- **Mechanical:** LEGO Technic beams, axles, gears, linkages (hand structure + grip transmission)  
+- **CAD / Fabrication:** **SolidWorks**, **3D printing (Prusa MK4, PLA)**  
 
 ## Project Goals
-- Build a **working prosthetic-hand-style gripper** using EV3-compatible components
-- Implement reliable **open/close control**, with basic safety limits
-- Explore **sensor-driven behavior** (optional), like grip triggers or feedback
+- Build a working prosthetic-hand-style gripper that can be developed toward a medical assistive concept using EV3-compatible components
+- Implement reliable open/close control with basic safety limits (encoder-based positioning)
+- Explore sensor-driven behaviors (grip trigger, proximity-based actions, release conditions)
 - Document the design so it can be reproduced or improved
 
 ## Demo
-- Video / photos: *(add link or put media in `/docs`)*
+- Demo 1: https://drive.google.com/file/d/1u6iXG5a_sigPQkx7iz7OC_ltrGPNhpzM/view?usp=sharing  
+- Demo 2: https://drive.google.com/file/d/1UtOttGSHC_REruDxqQpYOA-3Q0pk9Jdj/view?usp=sharing  
+- Demo 3: https://drive.google.com/file/d/1OvK0Yru-BhYl1_SVyntyIL9PVSVa64wP/view?usp=sharing  
+- Demo 4: https://drive.google.com/file/d/134nNxhyoesffMwnrE6gtcnD41NbJrs_N/view?usp=sharing  
+- Touch sensor mechanism demo: https://drive.google.com/file/d/1osuuIexqot-xtJVTjMkOZRjLW-lSD0nd/view?usp=sharing  
 
-## Features
-- Motor-driven hand actuation (open/close grip)
-- Configurable control logic (manual or sensor-driven)
-- Calibration approach (recommended) to prevent overdriving the mechanism
-- Modular design intended for iteration
+## What We Built
+- A 3-motor EV3 hand mechanism: two main fingers driven by large motors, plus a thumb driven by a medium motor through a geared linkage
+- A compact sensor layout:
+  - **Touch sensor** triggered via a palm “touch pad” linkage
+  - **Ultrasonic sensor** positioned near the palm for proximity-based behavior
+  - **Accelerometer** mounted on the back of the hand for motion-based logic
+- A custom handle assembly designed in **SolidWorks** and **3D printed** to improve usability and allow comfortable operation
 
-## Hardware Used
-- **LEGO Mindstorms EV3 Brick**
-- EV3 motor(s): *(Large / Medium motor — specify what you used)*
-- EV3 sensor(s) (optional): *(Touch / Ultrasonic / Color / Gyro — specify)*
-- Technic beams, axles, gears, linkages for the hand mechanism
-- Cables, connectors, mounting parts
+## Mechanical Design Highlights
+### Thumb drivetrain (Medium Motor)
+- The thumb is driven indirectly using **gears and axles** rather than direct drive.
+- Multiple gear ratios were tested; a **small gear on the motor driving a larger gear** improved torque/stability (at the cost of speed).
+- The thumb structure uses beams/pins similar to the main fingers, with an inverted tire for improved grip.
 
-> If you want this repo to be reproducible, add a simple BOM in `docs/BOM.md`.
+### Touch pad mechanism
+- A low-profile palm pad pivots when pressed and transfers force to the EV3 **touch sensor**.
+- This linkage reduces required press force and improves consistent activation from different pad locations.
 
-## Software / Environment
-- EV3 programming environment: *(EV3-G, EV3 Classroom, RobotC, leJOS, Python EV3Dev — specify what you used)*
-- OS (if applicable): *(Windows/macOS/Linux)*
+### Ultrasonic placement
+- The ultrasonic sensor is angled and positioned near the palm to detect objects ahead of the hand.
+- In the implemented behavior, if an object is within **~20 cm**, the hand opens.
 
-## How It Works (High Level)
-1. The EV3 motor actuates a linkage/gear mechanism to open/close the hand.
-2. A control routine sets the motor direction/speed based on:
-   - manual input (button / program toggle), and/or
-   - sensor input (e.g., touch triggers grip), if used.
-3. Optional calibration/limits prevent excessive torque and mechanical stalls.
+### Accelerometer placement
+- Mounted on the back of the hand to measure motion in 3 axes and support “release” logic.
+- Sensor orientation matters; the axis directions were accounted for in the program.
+
+## 3D Printed Parts (SolidWorks + Prusa MK4)
+- The handle consists of **three individually 3D printed parts** (printed on a **Prusa MK4**) and **glued** into one assembly.
+- Designed in **SolidWorks** with comfort in mind (convex grip shape).
+- The handle is printed in **PLA**; future iterations could add rubber or traction material to reduce slipping.
+
+## Assembly Notes
+- LEGO pins/axles were used throughout, but the overall chassis weight required extra reinforcement:
+  - **Zip ties** were used to secure the chassis, motors, and ultrasonic sensor where friction/pins were insufficient.
+  - The EV3 brick is mounted on the handle and held using **Velcro** for easy removal and access to buttons.
+
+## Software Overview (RobotC)
+- The program uses motor encoders to keep finger positions repeatable between runs.
+- A dedicated initialization routine “zeros” the fingers so open/close behavior is consistent across trials.
+- Motor helper routines support controlling individual motors or “ALL” motors together (with thumb speed adjusted relative to the fingers when closing).
 
 ## Setup
-1. Assemble the prosthetic hand mechanism.
-2. Connect the motor to the EV3 brick (port: `A/B/C/D`).
-3. Connect any sensor(s) to the EV3 brick (port: `1/2/3/4`).
-4. Upload/run the program.
-
-## Usage
-- **Open/Close**: *(describe your controls: button press, sensor trigger, timed routine, etc.)*
-- **Grip strength/speed**: adjust motor power in code or project settings.
-- **Calibration (recommended)**:
-  - Run the hand to the open limit gently
-  - Reset motor position (if supported in your environment)
-  - Use a safe range for closing to avoid stalling or breaking parts
-
-## Repo Structure (recommended)
+1. Assemble the EV3 prosthetic hand and handle.
+2. Connect motors to EV3 ports (`A/B/C/D`) and sensors to ports (`1/2/3/4`) based on your build.
+3. Upload the RobotC program to the EV3 brick.
+4. Run the program and verify:
+   - initialization completes correctly (fingers zero properly)
+   - sensor triggers behave as expected
+   - open/close limits avoid stalling the mechanism
