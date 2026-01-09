@@ -1,3 +1,39 @@
+/***************************************************************************************
+ * Project:      EV3 Prosthetic Hand (LEGO Mindstorms)
+ * File:         Prosthetic-Hand-EV3-code.c
+ * Team/Group:   Group 8-5
+ * Course:       MTE 121 - Digital Computation
+ * Version:      v2.3
+ * Date:         December 5, 2023
+ *
+ * Authors:
+ *   -Yaseen Mohamed
+ *   -Sara Alrifai
+ *   -Jack Doehler
+ *   -Evan Janakievski
+ *
+ * Description:
+ *   EV3 prosthetic hand control program written in RobotC. Implements:
+ *   - Auto-grab mode using Ultrasonic + Touch sensors
+ *   - Grip detection via motor encoder stall behavior
+ *   - Movement-based release lockout using HiTechnic Accelerometer
+ *   - Manual control mode + waving demo mode
+ *
+ * Hardware/Ports (edit to match your build):
+ *   Motors:
+ *     - motorA: Main finger 1
+ *     - motorD: Main finger 2
+ *     - motorC: Thumb
+ *   Sensors:
+ *     - S1: EV3 Touch sensor
+ *     - S2: EV3 Ultrasonic sensor
+ *     - S4: HiTechnic Accelerometer (I2C)
+ *
+ * Notes:
+ *   - Encoder thresholds and distance thresholds are tuned for the current mechanism.
+ *   - Emergency shutdown opens the hand at high speed.
+ ***************************************************************************************/
+
 #pragma config(Sensor, S1, HTAC, sensorI2CCustom)
 #include "hitechnic-accelerometer.h"
 
