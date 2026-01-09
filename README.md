@@ -18,6 +18,7 @@ A prototype prosthetic hand built using **LEGO Mindstorms EV3**, demonstrating a
 - Document the design so it can be reproduced or improved
 
 ## Demo
+Demo folder: https://drive.google.com/drive/folders/1JLLC8HWLDYezZzPMAi1FyZIcRnsr5J4P?usp=drive_link
 - Demo 1: https://drive.google.com/file/d/1u6iXG5a_sigPQkx7iz7OC_ltrGPNhpzM/view?usp=sharing  
 - Demo 2: https://drive.google.com/file/d/1UtOttGSHC_REruDxqQpYOA-3Q0pk9Jdj/view?usp=sharing  
 - Demo 3: https://drive.google.com/file/d/1OvK0Yru-BhYl1_SVyntyIL9PVSVa64wP/view?usp=sharing  
