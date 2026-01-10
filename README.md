@@ -66,7 +66,7 @@ Check the demo file in the repo, and use this link to demo folder with all video
 
 ## Setup
 1. Assemble the EV3 prosthetic hand and handle, with all required parts and gearing as shown in the report.
-2. Connect motors to EV3 ports (A,D for fingers, C for thumb) and sensors to ports (1(touch),2(ultrasonic),4(accelerometer)).
+2. Connect motors to EV3 ports ('A,D for fingers, C for thumb') and sensors to ports (1(touch),2(ultrasonic),4(accelerometer)).
 3. Upload the RobotC program to the EV3 brick.
 4. Run the program and verify:
    - initialization completes correctly (fingers zero properly)
