@@ -5,13 +5,14 @@ A prototype prosthetic hand built using **LEGO Mindstorms EV3**, demonstrating a
 <img src="Prosthetic-Hand-Image.jpg" alt="EV3 Prosthetic Hand" width="650">
 
 ## Tech Stack
-- **Platform:** LEGO Mindstorms EV3  
-- **Programming:** **RobotC** (C-based)  
-- **Controller:** EV3 Brick  
-- **Actuation:** **3 EV3 motors** (Large + Medium) driving finger and thumb motion  
-- **Sensors:** **Touch**, **Ultrasonic**, **Accelerometer**  
-- **Mechanical:** LEGO Technic beams, axles, gears, linkages (hand structure + grip transmission)  
-- **CAD / Fabrication:** **SolidWorks**, **3D printing (Prusa MK4, PLA)**  
+- **Platform:** LEGO Mindstorms EV3
+- **Programming:** **RobotC** (C-based)
+- **Controller:** EV3 Brick
+- **Environment:** RobotC for Lego Mindstorms IDE
+- **Actuation:** **3 EV3 motors** (Large + Medium) driving finger and thumb motion
+- **Sensors:** **Touch**, **Ultrasonic**, **Accelerometer**
+- **Mechanical:** LEGO Technic beams, axles, gears, linkages (hand structure + grip transmission)
+- **CAD / Fabrication:** **SolidWorks**, **3D printing (Prusa MK4, PLA)**
 
 ## Project Goals
 - Build a working prosthetic-hand-style gripper that can be developed toward a medical assistive concept, using EV3-compatible components
