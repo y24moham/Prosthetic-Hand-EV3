@@ -49,14 +49,14 @@ Check the demo folder in the repo, or use this link to demo folder: https://driv
 - Sensor orientation matters; the axis directions were accounted for in the program.
 
 ## 3D Printed Parts (SolidWorks + Prusa MK4)
-- The handle consists of **three individually 3D printed parts** (printed on a **Prusa MK4**) and **glued** into one assembly.
+- The handle consists of **three individually 3D printed parts** and glued into one assembly.
 - Designed in **SolidWorks** with comfort in mind (convex grip shape).
-- The handle is printed in **PLA**; future iterations could add rubber or traction material to reduce slipping.
+- The handle is printed in **PLA** on a Prusa MK4 **FDM 3D Printer**; future iterations could add rubber or traction material to reduce slipping.
 
 ## Assembly Notes
 - LEGO pins/axles were used throughout, but the overall chassis weight required extra reinforcement:
-  - **Zip ties** were used to secure the chassis, motors, and ultrasonic sensor where friction/pins were insufficient.
-  - The EV3 brick is mounted on the handle and held using **Velcro** for easy removal and access to buttons.
+  - Zip ties were used to secure the chassis, motors, and ultrasonic sensor where friction/pins were insufficient.
+  - The EV3 brick is mounted on the handle and held using Velcro for easy removal and access to buttons.
 
 ## Software Overview (RobotC)
 - The program uses motor encoders to keep finger positions repeatable between runs.
@@ -64,8 +64,8 @@ Check the demo folder in the repo, or use this link to demo folder: https://driv
 - Motor helper routines support controlling individual motors or “ALL” motors together (with thumb speed adjusted relative to the fingers when closing).
 
 ## Setup
-1. Assemble the EV3 prosthetic hand and handle.
-2. Connect motors to EV3 ports (`A/B/C/D`) and sensors to ports (`1/2/3/4`) based on your build.
+1. Assemble the EV3 prosthetic hand and handle, with all required parts and gearing as shown in the report.
+2. Connect motors to EV3 ports (A,D for fingers, C for thumb) and sensors to ports (1(touch),2(ultrasonic),4(accelerometer)).
 3. Upload the RobotC program to the EV3 brick.
 4. Run the program and verify:
    - initialization completes correctly (fingers zero properly)
