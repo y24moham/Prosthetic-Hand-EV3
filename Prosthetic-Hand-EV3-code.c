@@ -8,9 +8,7 @@
  *
  * Authors:
  *   -Yaseen Mohamed
- *   -Sara Alrifai
- *   -Jack Doehler
- *   -Evan Janakievski
+ *   (the rest of the group members' names removed for privacy)
  *
  * Description:
  *   EV3 prosthetic hand control program written in RobotC. Implements:
