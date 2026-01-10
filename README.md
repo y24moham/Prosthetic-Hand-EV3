@@ -6,7 +6,7 @@ A prototype prosthetic hand built using **LEGO Mindstorms EV3**, demonstrating a
 
 ## Tech Stack
 - **Platform:** LEGO Mindstorms EV3
-- **Programming:** **RobotC** (C-based)
+- **Programming:** **C** (RobotC)
 - **Controller:** EV3 Brick
 - **Environment:** RobotC for Lego Mindstorms IDE
 - **Actuation:** **3 EV3 motors** (Large + Medium) driving finger and thumb motion
@@ -59,7 +59,7 @@ Check the demo file in the repo, and use this link to demo folder with all video
   - Zip ties were used to secure the chassis, motors, and ultrasonic sensor where friction/pins were insufficient.
   - The EV3 brick is mounted on the handle and held using Velcro for easy removal and access to buttons.
 
-## Software Overview (RobotC)
+## Software Overview (C)
 - The program uses motor encoders to keep finger positions repeatable between runs.
 - A dedicated initialization routine “zeros” the fingers so open/close behavior is consistent across trials.
 - Motor helper routines support controlling individual motors or “ALL” motors together (with thumb speed adjusted relative to the fingers when closing).
