@@ -3,7 +3,7 @@
  * File:         Prosthetic-Hand-EV3-code.c
  * Team/Group:   Group 8-5
  * Course:       MTE 121 - Digital Computation
- * Version:      v2.3
+ * Version:      v8.0
  * Date:         December 5, 2023
  *
  * Authors:
