@@ -2,7 +2,7 @@
 
 A prototype prosthetic hand built using **LEGO Mindstorms EV3**, demonstrating a functional motor-driven grip mechanism and a control system designed for fast iteration and repeatable testing.
 
-<img src="Prosthetic-Hand-design.jpg" alt="EV3 Prosthetic Hand" width="650">
+<img src="Prosthetic-Hand-Image.jpg" alt="EV3 Prosthetic Hand" width="650">
 
 ## Tech Stack
 - **Platform:** LEGO Mindstorms EV3  
